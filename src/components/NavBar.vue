@@ -19,7 +19,7 @@
           </div>
           
           <!-- Phone number -->
-          <div class="font-bold text-lg">01689 861 007</div>
+          <div class="font-bold text-lg">0203 576 2392</div>
         </div>
         
         <!-- Mobile menu button -->

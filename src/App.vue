@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app-container">
     <NavBar />
     <HeroSection />
     <DownArrow />
@@ -37,3 +37,18 @@ export default {
   }
 }
 </script>
+
+<style>
+/* Global styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.app-container {
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+}
+</style>

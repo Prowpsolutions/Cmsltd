@@ -1,6 +1,6 @@
 <template>
     <!-- Hero section with background and slide navigation -->
-    <section class="h-screen relative flex items-center overflow-hidden">
+    <section class="h-screen relative flex items-center overflow-hidden bg-[#4b84b4]">
       <!-- Slider images -->
       <div class="absolute inset-0 bg-cover bg-center z-0 transition-opacity duration-500"
            :style="{ 

@@ -2,10 +2,10 @@
     <footer class="footer-section">
       <div class="footer-container">
         <div class="footer-left">
-          <a href="/privacy-policy" class="footer-link">Privacy Policy</a> | HWM Solutions {{ currentYear }} &copy;
+          <a href="/privacy-policy" class="footer-link">Privacy Policy</a> | CMS LTD {{ currentYear }} &copy;
         </div>
         <div class="footer-right">
-          Web Development by <a href="/index.html" class="footer-link">Nerdwares <span class="resknow-logo">N</span></a>
+          Email : <a href="/index.html" class="footer-link">info@cmsservicesltd.com</a>
         </div>
       </div>
     </footer>

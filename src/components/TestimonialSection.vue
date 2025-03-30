@@ -69,7 +69,7 @@
   <style scoped>
   .testimonial-section {
     width: 100%;
-    background-color: #f5f5f5;
+    background-color: #ffff;
     position: relative;
     overflow: hidden;
   }
@@ -102,7 +102,7 @@
     max-width: 800px;
     margin: 0 30px;
     text-align: center;
-    color: white;
+    color: black;
   }
   
   h2 {
@@ -144,7 +144,7 @@
   .nav-button {
     background: none;
     border: none;
-    color: white;
+    color: #4b81b7;
     font-size: 2rem;
     cursor: pointer;
     padding: 10px;
