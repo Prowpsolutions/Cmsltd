@@ -3,6 +3,7 @@
     <NavBar />
     <HeroSection />
     <DownArrow />
+    <AboutUsSection />
     <ServiceSection />
     <FeatureSection />
     <CreditSection />
@@ -17,6 +18,7 @@ import NavBar from './components/NavBar.vue'
 import HeroSection from './components/HeroSection.vue'
 import DownArrow from './components/DownArrow.vue'
 import ServiceSection from './components/ServiceSection.vue'
+import AboutUsSection from './components/AboutUsSection.vue'
 import FeatureSection from './components/FeatureSection.vue'
 import CreditSection from './components/CreditSection.vue'
 import TestimonialSection from './components/TestimonialSection.vue'
@@ -29,6 +31,7 @@ export default {
     HeroSection,
     DownArrow,
     ServiceSection,
+    AboutUsSection,
     FeatureSection,
     CreditSection,
     TestimonialSection,
