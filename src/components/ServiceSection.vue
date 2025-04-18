@@ -2,14 +2,14 @@
   <section class="service-section">
     <div class="container">
       <div class="service-grid">
-        <div v-for="property in visibleProperties" :key="property.id" class="service-card">
-          <router-link :to="property.link" class="service-link">
+        <div v-for="service in visibleServices" :key="service.id" class="service-card">
+          <router-link :to="service.link" class="service-link">
             <div class="image-container">
-              <img :src="property.image" :alt="property.title" class="service-image" />
+              <img :src="service.image" :alt="service.title" class="service-image" />
             </div>
           </router-link>
           <div class="service-title">
-            <h3>{{ property.title }}</h3>
+            <h3>{{ service.title }}</h3>
             <div class="arrow-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10" />
@@ -21,10 +21,10 @@
         </div>
       </div>
       
-      <!-- Fixed button container -->
+      <!-- Show more/less button -->
       <div class="view-more-container" id="view-more-btn-container">
         <button @click="toggleViewMore" class="view-more-btn" id="view-more-button">
-          <span>{{ showAll ? 'Show Less Properties' : 'See Who We Have Helped' }}</span>
+          <span>{{ showAll ? 'Show Less Services' : 'View All Services' }}</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon" :class="{'rotate-icon': showAll}">
             <path d="M6 9l6 6 6-6"/>
           </svg>
@@ -36,97 +36,61 @@
 
 <script>
 export default {
-  name: 'PropertySection',
+  name: 'ServiceSection',
   data() {
     return {
       showAll: false,
-      itemsPerRow: 4,
+      itemsPerRow: 3,
       rowsToShow: 1,
       buttonVisible: true, // Explicitly track button visibility
-      properties: [
+      services: [
         {
           id: 1,
-          title: 'SUNLIGHT APARTMENTS',
-          image: '/images/sunlight-apartments.jpg',
-          link: '/properties/sunlight-apartments'
+          title: 'Core Project Services',
+          image: '/images/core-project-services.jpg',
+          link: '/services/core-project'
         },
         {
           id: 2,
-          title: 'BERNARD MYERS HOUSE',
-          image: '/images/bernard-myers-house.jpg',
-          link: '/properties/bernard-myers-house'
+          title: 'Drying Services',
+          image: '/images/drying-services.jpg',
+          link: '/services/drying'
         },
         {
           id: 3,
-          title: 'VAUXHALL SKY GARDENS',
-          image: '/images/vauxhall-sky-gardens.jpg',
-          link: '/properties/vauxhall-sky-gardens'
+          title: 'Maintenance Services',
+          image: '/images/maintenance-services.jpg',
+          link: '/services/maintenance'
         },
         {
           id: 4,
-          title: 'HOOLA APARTMENTS LONDON',
-          image: '/images/hoola-apartments.jpg',
-          link: '/properties/hoola-apartments'
+          title: 'Building Services',
+          image: '/images/building-services.jpg',
+          link: '/services/building'
         },
         {
           id: 5,
-          title: 'BRONZE APARTMENTS WANDSWORTH',
-          image: '/images/bronze-apartments.jpg',
-          link: '/properties/bronze-apartments'
+          title: 'Mechanical Services',
+          image: '/images/mechanical-services.jpg',
+          link: '/services/mechanical'
         },
         {
           id: 6,
-          title: 'CAMBERWELL ON THE GREEN',
-          image: '/images/camberwell-on-the-green.jpg',
-          link: '/properties/camberwell-on-the-green'
-        },
-        {
-          id: 7,
-          title: 'VIZON 7 HOLLOWAY',
-          image: '/images/vizon-7-holloway.jpg',
-          link: '/properties/vizon-7-holloway'
-        },
-        {
-          id: 8,
-          title: 'CITY PENNINSULA GREENWICH',
-          image: '/images/city-penninsula.jpg',
-          link: '/properties/city-penninsula'
-        },
-        {
-          id: 9,
-          title: 'ERNEST WEBSDALE BARKING RIVERSIDE',
-          image: '/images/ernest-websdale.jpg',
-          link: '/properties/ernest-websdale'
-        },
-        {
-          id: 10,
-          title: 'OVAL QUARTER',
-          image: '/images/oval-quarter.jpg',
-          link: '/properties/oval-quarter'
-        },
-        {
-          id: 11,
-          title: 'BLUEBIRD HOUSE BARKING RIVERSIDE',
-          image: '/images/bluebird-house.jpg',
-          link: '/properties/bluebird-house'
-        },
-        {
-          id: 12,
-          title: 'TOTTENHAM HALE',
-          image: '/images/tottenham-hale.jpg',
-          link: '/properties/tottenham-hale'
+          title: 'Cleaning Services',
+          image: '/images/cleaning-services.jpg',
+          link: '/services/cleaning'
         }
       ]
     }
   },
   computed: {
-    visibleProperties() {
+    visibleServices() {
       return this.showAll 
-        ? this.properties 
-        : this.properties.slice(0, this.itemsPerRow * this.rowsToShow);
+        ? this.services 
+        : this.services.slice(0, this.itemsPerRow * this.rowsToShow);
     },
-    hasMoreProperties() {
-      return this.properties.length > this.itemsPerRow * this.rowsToShow;
+    hasMoreServices() {
+      return this.services.length > this.itemsPerRow * this.rowsToShow;
     }
   },
   methods: {
@@ -153,8 +117,8 @@ export default {
   mounted() {
     console.log('Component mounted');
     console.log('Initial state - showAll:', this.showAll);
-    console.log('Properties count:', this.properties.length);
-    console.log('Visible properties count:', this.visibleProperties.length);
+    console.log('Services count:', this.services.length);
+    console.log('Visible services count:', this.visibleServices.length);
     
     // Check and enforce button visibility
     this.checkButtonVisibility();
@@ -345,13 +309,6 @@ export default {
   
   .service-title h3 {
     font-size: 1.25rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .service-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
   }
 }
 

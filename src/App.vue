@@ -3,7 +3,10 @@
     <NavBar />
     <HeroSection />
     <DownArrow />
+<<<<<<< HEAD
     <AboutUsSection />
+=======
+>>>>>>> e5bc4928c871be78f3bc4e13bb32b938028a0921
     <ServiceSection />
     <FeatureSection />
     <CreditSection />
@@ -18,7 +21,10 @@ import NavBar from './components/NavBar.vue'
 import HeroSection from './components/HeroSection.vue'
 import DownArrow from './components/DownArrow.vue'
 import ServiceSection from './components/ServiceSection.vue'
+<<<<<<< HEAD
 import AboutUsSection from './components/AboutUsSection.vue'
+=======
+>>>>>>> e5bc4928c871be78f3bc4e13bb32b938028a0921
 import FeatureSection from './components/FeatureSection.vue'
 import CreditSection from './components/CreditSection.vue'
 import TestimonialSection from './components/TestimonialSection.vue'
@@ -31,7 +37,10 @@ export default {
     HeroSection,
     DownArrow,
     ServiceSection,
+<<<<<<< HEAD
     AboutUsSection,
+=======
+>>>>>>> e5bc4928c871be78f3bc4e13bb32b938028a0921
     FeatureSection,
     CreditSection,
     TestimonialSection,
