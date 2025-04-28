@@ -12,9 +12,6 @@
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
     
-    <!-- Left arrow navigation -->
-    
-    
     <!-- Content -->
     <div class="container mx-auto px-6 relative z-20 text-white">
       <h1 class="text-3xl md:text-5xl font-bold mb-4">
@@ -44,6 +41,9 @@
 <script>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { gsap } from 'gsap'
+// Import your images directly - this is the correct way in Vue/Vite
+import heroImage1 from '@/assets/hero-image-1.png'
+import heroImage2 from '@/assets/hero-image-2.png'
 
 export default {
   setup() {
@@ -51,26 +51,22 @@ export default {
       {
         title: "",
         description: "",
-        image: "/src/assets/hero-image-1.png",
-       
+        image: heroImage1,
       },
       {
         title: "",
         description: "",
-        image: "/src/assets/hero-image-2.png",
-        
+        image: heroImage2,
       },
       {
         title: "",
         description: "",
-        image: "/src/assets/hero-image-1.png",
-        
+        image: heroImage1,
       },
       {
         title: "",
         description: "",
-        image: "/src/assets/hero-image-2.png",
-       
+        image: heroImage2,
       }
     ]
     

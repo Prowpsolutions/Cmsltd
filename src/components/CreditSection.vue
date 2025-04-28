@@ -7,7 +7,7 @@
       <!-- Bento Box Grid -->
       <div class="bento-grid">
         <!-- Featured Project (Large) -->
-        <div class="bento-item large" @click="showPortfolioModal = true">
+        <div class="bento-item large" @click="showPortfolioModal = true; goToSlide(0)">
           <div class="bento-image placeholder-bg bg-blue-100">
             <div class="bento-overlay">
               <h3>SUNLIGHT APARTMENTS</h3>
@@ -16,7 +16,7 @@
         </div>
         
         <!-- Medium Projects -->
-        <div class="bento-item medium" @click="showPortfolioModal = true">
+        <div class="bento-item medium" @click="showPortfolioModal = true; goToSlide(1)">
           <div class="bento-image placeholder-bg bg-blue-200">
             <div class="bento-overlay">
               <h3>BERNARD MYERS HOUSE</h3>
@@ -24,7 +24,7 @@
           </div>
         </div>
         
-        <div class="bento-item medium" @click="showPortfolioModal = true">
+        <div class="bento-item medium" @click="showPortfolioModal = true; goToSlide(2)">
           <div class="bento-image placeholder-bg bg-blue-300">
             <div class="bento-overlay">
               <h3>VAUXHALL SKY GARDENS</h3>
@@ -33,7 +33,7 @@
         </div>
         
         <!-- Small Projects -->
-        <div class="bento-item small" @click="showPortfolioModal = true">
+        <div class="bento-item small" @click="showPortfolioModal = true; goToSlide(3)">
           <div class="bento-image placeholder-bg bg-blue-400">
             <div class="bento-overlay">
               <h3>HOOLA APARTMENTS</h3>
@@ -41,7 +41,7 @@
           </div>
         </div>
         
-        <div class="bento-item small" @click="showPortfolioModal = true">
+        <div class="bento-item small" @click="showPortfolioModal = true; goToSlide(4)">
           <div class="bento-image placeholder-bg bg-blue-500">
             <div class="bento-overlay">
               <h3>BRONZE APARTMENTS</h3>
@@ -49,7 +49,7 @@
           </div>
         </div>
         
-        <div class="bento-item small" @click="showPortfolioModal = true">
+        <div class="bento-item small" @click="showPortfolioModal = true; goToSlide(5)">
           <div class="bento-image placeholder-bg bg-blue-600">
             <div class="bento-overlay">
               <h3>CAMBERWELL ON THE GREEN</h3>
@@ -82,7 +82,8 @@
             <div class="carousel-slides" ref="slides" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
               <div v-for="(project, index) in projects" :key="index" class="carousel-slide">
                 <div class="project-image placeholder-bg" :class="`bg-blue-${(index % 6) * 100 + 100}`">
-                  <div class="project-overlay">
+                  <!-- Project name appears only on the active slide -->
+                  <div class="project-overlay" :class="{ 'active-overlay': currentSlide === index }">
                     <h3>{{ project.name }}</h3>
                   </div>
                 </div>
@@ -139,11 +140,11 @@ export default {
           image: 'vauxhall-sky-gardens.jpg',
         },
         {
-          name: 'HOOLA APARTMENTS LONDON',
+          name: 'HOOLA APARTMENTS',
           image: 'hoola-apartments.jpg',
         },
         {
-          name: 'BRONZE APARTMENTS WANDSWORTH',
+          name: 'BRONZE APARTMENTS',
           image: 'bronze-apartments.jpg',
         },
         {
@@ -155,7 +156,7 @@ export default {
           image: 'vizon-7-holloway.jpg',
         },
         {
-          name: 'CITY PENNINSULA GREENWICH',
+          name: 'CITY PENINSULA GREENWICH',
           image: 'city-peninsula.jpg',
         },
         {
@@ -395,6 +396,7 @@ export default {
 .carousel-slide {
   flex: 0 0 100%;
   height: 100%;
+  position: relative;
 }
 
 .project-image {
@@ -412,6 +414,15 @@ export default {
   background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
   padding: 30px;
   color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 5;
+}
+
+.project-overlay.active-overlay {
+  opacity: 1;
+  visibility: visible;
 }
 
 .project-overlay h3 {

@@ -1,6 +1,6 @@
 <template>
   <section class="services-accordion-section py-16 bg-white">
-    <div class="container mx-auto px-4 md:pl-14">
+    <div class="container mx-auto px-4 xl:pl-14">
       <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800 mb-8 pb-4 relative">Our Services</h2>
       
       <div class="accordion-container">
