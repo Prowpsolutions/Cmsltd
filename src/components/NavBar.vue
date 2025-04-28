@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed w-full z-50">
+  <header class="w-full z-50 absolute top-0 left-0 right-0 bg-transparent">
     <!-- Desktop navigation -->
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center text-white">
       <!-- Logo - replaced text with SVG image -->

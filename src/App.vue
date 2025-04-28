@@ -7,7 +7,7 @@
     <ServiceSection />
     <FeatureSection />
     <CreditSection />
-    <TestimonialSection />
+   
     <CtaSection />
     <FooterSection />
   </div>
@@ -21,7 +21,7 @@ import ServiceSection from './components/ServiceSection.vue'
 import AboutUsSection from './components/AboutUsSection.vue'
 import FeatureSection from './components/FeatureSection.vue'
 import CreditSection from './components/CreditSection.vue'
-import TestimonialSection from './components/TestimonialSection.vue'
+
 import CtaSection from './components/CtaSection.vue'
 import FooterSection from './components/FooterSection.vue'
 
@@ -34,7 +34,7 @@ export default {
     AboutUsSection,
     FeatureSection,
     CreditSection,
-    TestimonialSection,
+ 
     CtaSection,
     FooterSection
   }

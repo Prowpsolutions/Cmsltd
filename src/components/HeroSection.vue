@@ -13,22 +13,7 @@
     <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
     
     <!-- Left arrow navigation -->
-    <div class="absolute left-4 top-1/2 z-30 transform -translate-y-1/2">
-      <button @click="prevSlide" class="w-10 h-10 flex items-center justify-center text-white hover:text-gray-300">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-    </div>
     
-    <!-- Right arrow navigation -->
-    <div class="absolute right-4 top-1/2 z-30 transform -translate-y-1/2">
-      <button @click="nextSlide" class="w-10 h-10 flex items-center justify-center text-white hover:text-gray-300">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-    </div>
     
     <!-- Content -->
     <div class="container mx-auto px-6 relative z-20 text-white">
@@ -64,57 +49,28 @@ export default {
   setup() {
     const slides = [
       {
-        title: "BUILDING SERVICES",
-        description: "CMSS provides a 24/7 fast and reliable reactive maintenance service in Greater London and Home Counties.",
-        image: "https://source.unsplash.com/random/1920x1080/?construction,building",
-        bulletPoints: [
-          "24/7 Maintenance Helpdesk",
-          "Reactive Maintenance",
-          "Major Refurbishment Works",
-          "Minor Works Projects"
-        ]
+        title: "",
+        description: "",
+        image: "/src/assets/hero-image-1.png",
+       
       },
       {
-        title: "MAINTENANCE SERVICES",
-        description: "CMSS specializes in delivering top-quality maintenance services, ensuring every task is handled with precision and care. Our team is reliable, proactive, and committed to keeping properties in excellent condition.",
-        image: "https://source.unsplash.com/random/1920x1080/?maintenance,repair",
-        bulletPoints: [
-          "Drainage",
-          "Roofing",
-          "Plumbing",
-          "Electrics",
-          "Painting and Decorating"
-        ]
+        title: "",
+        description: "",
+        image: "/src/assets/hero-image-2.png",
+        
       },
       {
-        title: "MECHANICAL SERVICES",
-        description: "CMSS has vast experience in undertaking planned servicing programmes to a wide range of installed equipment, from domestic gas boilers through to complex communal plant services.",
-        image: "https://source.unsplash.com/random/1920x1080/?mechanical,engineering",
-        bulletPoints: [
-          "Compliance & Planned Maintenance",
-          "Water Safety/Legionella",
-          "M&E Plant and Equipment",
-          "Air Conditioning",
-          "Heating",
-          "Ventilation"
-        ]
+        title: "",
+        description: "",
+        image: "/src/assets/hero-image-1.png",
+        
       },
       {
-        title: "CLEANING SERVICES",
-        description: "CMSS is effective at providing cleaning services and we are very detail-oriented in our work. We are efficient and thorough, and get the job done well and in a timely manner.",
-        image: "https://source.unsplash.com/random/1920x1080/?cleaning,service",
-        bulletPoints: [
-          "Office Cleaning",
-          "Window Cleaning",
-          "Floor Cleaning",
-          "Washroom Services",
-          "Waste Management Services",
-          "Pressure Washing",
-          "Domestic Cleaning",
-          "End of Tenancy Cleaning",
-          "Carpet Cleaning",
-          "Commercial Cleaning"
-        ]
+        title: "",
+        description: "",
+        image: "/src/assets/hero-image-2.png",
+       
       }
     ]
     
