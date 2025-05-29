@@ -8,51 +8,51 @@
       <div class="bento-grid">
         <!-- Featured Project (Large) -->
         <div class="bento-item large" @click="showPortfolioModal = true; goToSlide(0)">
-          <div class="bento-image placeholder-bg bg-blue-100">
+          <div class="bento-image" :style="{ backgroundImage: `url(${projects[0].image})` }">
             <div class="bento-overlay">
-              <h3>SUNLIGHT APARTMENTS</h3>
+              <h3>{{ projects[0].name }}</h3>
             </div>
           </div>
         </div>
         
         <!-- Medium Projects -->
         <div class="bento-item medium" @click="showPortfolioModal = true; goToSlide(1)">
-          <div class="bento-image placeholder-bg bg-blue-200">
+          <div class="bento-image" :style="{ backgroundImage: `url(${projects[1].image})` }">
             <div class="bento-overlay">
-              <h3>BERNARD MYERS HOUSE</h3>
+              <h3>{{ projects[1].name }}</h3>
             </div>
           </div>
         </div>
         
         <div class="bento-item medium" @click="showPortfolioModal = true; goToSlide(2)">
-          <div class="bento-image placeholder-bg bg-blue-300">
+          <div class="bento-image" :style="{ backgroundImage: `url(${projects[2].image})` }">
             <div class="bento-overlay">
-              <h3>VAUXHALL SKY GARDENS</h3>
+              <h3>{{ projects[2].name }}</h3>
             </div>
           </div>
         </div>
         
         <!-- Small Projects -->
         <div class="bento-item small" @click="showPortfolioModal = true; goToSlide(3)">
-          <div class="bento-image placeholder-bg bg-blue-400">
+          <div class="bento-image" :style="{ backgroundImage: `url(${projects[3].image})` }">
             <div class="bento-overlay">
-              <h3>HOOLA APARTMENTS</h3>
+              <h3>{{ projects[3].name }}</h3>
             </div>
           </div>
         </div>
         
         <div class="bento-item small" @click="showPortfolioModal = true; goToSlide(4)">
-          <div class="bento-image placeholder-bg bg-blue-500">
+          <div class="bento-image" :style="{ backgroundImage: `url(${projects[4].image})` }">
             <div class="bento-overlay">
-              <h3>BRONZE APARTMENTS</h3>
+              <h3>{{ projects[4].name }}</h3>
             </div>
           </div>
         </div>
         
         <div class="bento-item small" @click="showPortfolioModal = true; goToSlide(5)">
-          <div class="bento-image placeholder-bg bg-blue-600">
+          <div class="bento-image" :style="{ backgroundImage: `url(${projects[5].image})` }">
             <div class="bento-overlay">
-              <h3>CAMBERWELL ON THE GREEN</h3>
+              <h3>{{ projects[5].name }}</h3>
             </div>
           </div>
         </div>
@@ -81,7 +81,7 @@
           <div class="carousel-container">
             <div class="carousel-slides" ref="slides" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
               <div v-for="(project, index) in projects" :key="index" class="carousel-slide">
-                <div class="project-image placeholder-bg" :class="`bg-blue-${(index % 6) * 100 + 100}`">
+                <div class="project-image" :style="{ backgroundImage: `url(${project.image})` }">
                   <!-- Project name appears only on the active slide -->
                   <div class="project-overlay" :class="{ 'active-overlay': currentSlide === index }">
                     <h3>{{ project.name }}</h3>
@@ -129,51 +129,51 @@ export default {
       projects: [
         {
           name: 'SUNLIGHT APARTMENTS',
-          image: 'sunlight-apartments.jpg',
+          image: 'src/assets/sunlight-apartments.jpg',
         },
         {
           name: 'BERNARD MYERS HOUSE',
-          image: 'bernard-myers-house.jpg',
+          image: 'src/assets/bernard-myers-house.jpg',
         },
         {
           name: 'VAUXHALL SKY GARDENS',
-          image: 'vauxhall-sky-gardens.jpg',
+          image: 'src/assets/vauxhall-sky-gardens.jpg',
         },
         {
           name: 'HOOLA APARTMENTS',
-          image: 'hoola-apartments.jpg',
+          image: 'src/assets/hoola-apartments.jpg',
         },
         {
           name: 'BRONZE APARTMENTS',
-          image: 'bronze-apartments.jpg',
+          image: 'src/assets/bronze-apartments.jpg',
         },
         {
           name: 'CAMBERWELL ON THE GREEN',
-          image: 'camberwell-green.jpg',
+          image: 'src/assets/camberwell-green.jpg',
         },
         {
           name: 'VIZON 7 HOLLOWAY',
-          image: 'vizon-7-holloway.jpg',
+          image: 'src/assets/vizon-7-holloway.jpg',
         },
         {
           name: 'CITY PENINSULA GREENWICH',
-          image: 'city-peninsula.jpg',
+          image: 'src/assets/city-peninsula.jpg',
         },
         {
           name: 'ERNEST WEBSDALE BARKING RIVERSIDE',
-          image: 'ernest-websdale.jpg',
+          image: 'src/assets/ernest-websdale.jpg',
         },
         {
           name: 'OVAL QUARTER',
-          image: 'oval-quarter.jpg',
+          image: 'src/assets/oval-quarter.jpg',
         },
         {
           name: 'BLUEBIRD HOUSE BARKING RIVERSIDE',
-          image: 'bluebird-house.jpg',
+          image: 'src/assets/bluebird-house.jpg',
         },
         {
           name: 'TOTTENHAM HALE',
-          image: 'tottenham-hale.jpg',
+          image: 'src/assets/tottenham-hale.jpg',
         }
       ]
     }
@@ -272,6 +272,7 @@ export default {
   height: 100%;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   transition: transform 0.5s ease;
 }
 
@@ -404,6 +405,7 @@ export default {
   height: 100%;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .project-overlay {

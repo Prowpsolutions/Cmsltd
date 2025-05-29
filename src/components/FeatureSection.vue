@@ -6,11 +6,7 @@
         <div class="feature-image" ref="featureImage1">
           <!-- Use placeholder image until real image is available -->
           <div class="placeholder-image">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-              <circle cx="8.5" cy="8.5" r="1.5"></circle>
-              <polyline points="21 15 16 10 5 21"></polyline>
-            </svg>
+             <img src="../assets/feature.png" alt="Capital Maintenance and Support Services" />
             <span>Team Image</span>
           </div>
         </div>
@@ -33,11 +29,7 @@
         <div class="feature-image" ref="featureImage2">
           <!-- Use placeholder image until real image is available -->
           <div class="placeholder-image">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-              <circle cx="8.5" cy="8.5" r="1.5"></circle>
-              <polyline points="21 15 16 10 5 21"></polyline>
-            </svg>
+            <img src="../assets/feature2.png" alt="Capital Maintenance and Support Services" />
             <span>Construction Image</span>
           </div>
         </div>

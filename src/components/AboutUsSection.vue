@@ -56,15 +56,7 @@
           
           <div class="about-image-container">
             <div class="about-image">
-              <!-- Using a placeholder image instead of a file path -->
-              <div class="placeholder-image">
-                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="2" width="20" height="20" rx="2" ry="2"/>
-                  <circle cx="12" cy="12" r="4"/>
-                  <line x1="16" y1="8" x2="16" y2="8.01"/>
-                </svg>
-                <p>Maintenance & Support Services</p>
-              </div>
+              <img src="../assets/maintenance.png" alt="Capital Maintenance and Support Services" />
             </div>
           </div>
         </div>
@@ -287,30 +279,6 @@
     width: 100%;
     height: auto;
     display: block;
-  }
-  
-  /* Placeholder styles */
-  .placeholder-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f0f4ff;
-    width: 100%;
-    height: 300px;
-    color: #4a6cf7;
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .placeholder-image svg {
-    margin-bottom: 1rem;
-  }
-  
-  .placeholder-image p {
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin: 0;
   }
   
   @media (max-width: 768px) {
