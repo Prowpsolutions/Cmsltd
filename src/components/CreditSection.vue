@@ -120,6 +120,8 @@
 </template>
 
 <script>
+import { portfolioImages } from '@/assets/images.js'
+
 export default {
   name: 'PortfolioShowcase',
   data() {
@@ -129,51 +131,51 @@ export default {
       projects: [
         {
           name: 'SUNLIGHT APARTMENTS',
-          image: 'src/assets/sunlight-apartments.jpg',
+          image: portfolioImages.sunlightApartments,
         },
         {
           name: 'BERNARD MYERS HOUSE',
-          image: 'src/assets/bernard-myers-house.jpg',
+          image: portfolioImages.bernardMyers,
         },
         {
           name: 'VAUXHALL SKY GARDENS',
-          image: 'src/assets/vauxhall-sky-gardens.jpg',
+          image: portfolioImages.vauxhallSky,
         },
         {
           name: 'HOOLA APARTMENTS',
-          image: 'src/assets/hoola-apartments.jpg',
+          image: portfolioImages.hoolaApartments,
         },
         {
           name: 'BRONZE APARTMENTS',
-          image: 'src/assets/bronze-apartments.jpg',
+          image: portfolioImages.bronzeApartments,
         },
         {
           name: 'CAMBERWELL ON THE GREEN',
-          image: 'src/assets/camberwell-green.jpg',
+          image: portfolioImages.camberwellGreen,
         },
         {
           name: 'VIZON 7 HOLLOWAY',
-          image: 'src/assets/vizon-7-holloway.jpg',
+          image: portfolioImages.vizonHolloway,
         },
         {
           name: 'CITY PENINSULA GREENWICH',
-          image: 'src/assets/city-peninsula.jpg',
+          image: portfolioImages.cityPeninsula,
         },
         {
           name: 'ERNEST WEBSDALE BARKING RIVERSIDE',
-          image: 'src/assets/ernest-websdale.jpg',
+          image: portfolioImages.ernestWebsdale,
         },
         {
           name: 'OVAL QUARTER',
-          image: 'src/assets/oval-quarter.jpg',
+          image: portfolioImages.ovalQuarter,
         },
         {
           name: 'BLUEBIRD HOUSE BARKING RIVERSIDE',
-          image: 'src/assets/bluebird-house.jpg',
+          image: portfolioImages.bluebirdHouse,
         },
         {
           name: 'TOTTENHAM HALE',
-          image: 'src/assets/tottenham-hale.jpg',
+          image: portfolioImages.tottenhamHale,
         }
       ]
     }

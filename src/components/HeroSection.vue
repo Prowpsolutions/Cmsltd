@@ -41,32 +41,54 @@
 <script>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { gsap } from 'gsap'
-// Import your images directly - this is the correct way in Vue/Vite
-import heroImage1 from '@/assets/hero-image-1.png'
-import heroImage2 from '@/assets/hero-image-2.png'
+import { heroImages } from '@/assets/images.js'
 
 export default {
   setup() {
     const slides = [
       {
-        title: "",
-        description: "",
-        image: heroImage1,
+        title: "Expert Property Maintenance Services",
+        description: "Capital Maintenance and Support Services Ltd provides comprehensive property maintenance solutions across London and the South East.",
+        image: heroImages.heroImage1,
+        bulletPoints: [
+          "24/7 Emergency Response",
+          "Fully Qualified Technicians", 
+          "Comprehensive Insurance Coverage",
+          "Single Source Service Delivery"
+        ]
       },
       {
-        title: "",
-        description: "",
-        image: heroImage2,
+        title: "Trusted by Property Professionals",
+        description: "Serving residential and commercial managing agents, landlords, freeholders, retailers, and hospitality providers since 2020.",
+        image: heroImages.heroImage2,
+        bulletPoints: [
+          "Residential & Commercial Properties",
+          "Managing Agent Partnerships",
+          "Retail & Hospitality Specialists",
+          "Insurance Claim Support"
+        ]
       },
       {
-        title: "",
-        description: "",
-        image: heroImage1,
+        title: "Complete Maintenance Solutions",
+        description: "From routine maintenance to emergency repairs, we handle all aspects of your property maintenance needs with our in-house expertise.",
+        image: heroImages.heroImage1,
+        bulletPoints: [
+          "Plumbing & Heating",
+          "Electrical Services",
+          "General Building Work",
+          "Preventive Maintenance Programs"
+        ]
       },
       {
-        title: "",
-        description: "",
-        image: heroImage2,
+        title: "Quality You Can Trust",
+        description: "Our commitment to excellence and customer satisfaction sets us apart from competitors in the property maintenance industry.",
+        image: heroImages.heroImage2,
+        bulletPoints: [
+          "Quality Guaranteed Work",
+          "Competitive Pricing",
+          "Fast Response Times",
+          "Professional Service Standards"
+        ]
       }
     ]
     
